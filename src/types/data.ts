@@ -25,13 +25,7 @@ export interface ChatItem {
 }
 
 /** チャットメッセージの文字列or絵文字 */
-export type MessageItem = TextItem | EmojiItem
-
-/** テキスト */
-export interface TextItem {
-  type: "text"
-  text: string
-}
+export type MessageItem = { text: string } | EmojiItem
 
 /** 画像 */
 export interface ImageItem {
@@ -41,7 +35,6 @@ export interface ImageItem {
 
 /** Emoji */
 export interface EmojiItem extends ImageItem {
-  type: "emoji"
   emojiText: string
   isCustomEmoji: boolean
 }
