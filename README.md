@@ -99,7 +99,16 @@ interface ChatItem {
 ### MessageItem
 
 ```typescript
-type MessageItem = { text: string } | EmojiItem
+type MessageItem = TextItem | EmojiItem
+```
+
+### TextItem
+
+```typescript
+interface TextItem {
+  type: "text"
+  text: string
+}
 ```
 
 ### ImageItem
@@ -113,6 +122,7 @@ interface ImageItem {
 ### EmojiItem
 ```typescript
 interface EmojiItem extends ImageItem {
+  type: "emoji"
   emojiText: string
   isCustomEmoji: boolean
 }
