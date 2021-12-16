@@ -10,9 +10,8 @@
 
 ## Getting started
 1. Install
-    - ~~`npm i youtube-chat`~~
-    - ~~`yarn add youtube-chat`~~
-    - `npm i https://github.com/InstantRocker/youtube-chat.git`
+    - `npm i youtube-chat`
+    - `yarn add youtube-chat`
 2. Import
     - Javascript
     ```javascript
@@ -100,16 +99,7 @@ interface ChatItem {
 ### MessageItem
 
 ```typescript
-type MessageItem = TextItem | EmojiItem
-```
-
-### TextItem
-
-```typescript
-interface TextItem {
-  type: "text"
-  text: string
-}
+type MessageItem = { text: string } | EmojiItem
 ```
 
 ### ImageItem
@@ -123,7 +113,6 @@ interface ImageItem {
 ### EmojiItem
 ```typescript
 interface EmojiItem extends ImageItem {
-  type: "emoji"
   emojiText: string
   isCustomEmoji: boolean
 }

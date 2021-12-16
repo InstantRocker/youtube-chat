@@ -101,17 +101,13 @@ function convertColorToHex6(colorNum: number) {
 function parseMessages(runs: MessageRun[]): MessageItem[] {
   return runs.map((run: MessageRun): MessageItem => {
     if ("text" in run) {
-      return {
-        type: "text",
-        text: run
-      }
+      return run
     } else {
       // Emoji
       const thumbnail = run.emoji.image.thumbnails.shift()
       const isCustomEmoji = Boolean(run.emoji.isCustomEmoji)
       const shortcut = run.emoji.shortcuts[0]
       return {
-        type: "emoji",
         url: thumbnail ? thumbnail.url : "",
         alt: shortcut,
         isCustomEmoji: isCustomEmoji,
