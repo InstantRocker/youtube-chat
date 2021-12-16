@@ -10,8 +10,9 @@
 
 ## Getting started
 1. Install
-    - `npm i youtube-chat`
-    - `yarn add youtube-chat`
+    - ~~`npm i youtube-chat`~~
+    - ~~`yarn add youtube-chat`~~
+    - `npm i https://github.com/InstantRocker/youtube-chat.git`
 2. Import
     - Javascript
     ```javascript
