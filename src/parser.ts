@@ -103,7 +103,7 @@ function parseMessages(runs: MessageRun[]): MessageItem[] {
     if ("text" in run) {
       return {
         type: "text",
-        text: run
+        text: run.text
       }
     } else {
       // Emoji
